@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+button{
+    cursor: pointer;
+}
+
+.container{
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+a{
+    color: inherit;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff2;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 999;
+}
+.form{
+    display: flex;
+    gap: 10px;
+}
+.search{
+    background: skyblue;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero{
+    padding-top: 120px;
+    width: 100%;
+    height: 150vh;
+    background: url("../images/clouds_sky_beautiful_174226_3840x2160.jpg")  center/cover;
+}
+
+input{
+    padding: 5px 0 5px 5px;
+    width: 100%;
+    outline: none;
+    background-color: skyblue;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+
+}
+::placeholder{
+    color: rgb(255, 255, 255);
+}
+
+h2{
+    color: white;
+}
+.weather__wrapper{
+    width: 100%;
+    min-height: 200px;
+    background: #fff2;
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px;
+}
+.weather__desc,
+.weather__region{
+    font-size: 24px;
+}
+.weather__info{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.weather__degree{
+    font-size: 80px;
+}
+.forecastday{
+    display: flex;
+    gap: 10px;
+    overflow: auto;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+
+.forecastday::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 10px;
+}
+.forecastday::-webkit-scrollbar{
+    height: 8px;
+}
+
+.forecastday__item{
+    border-radius: 10px;
+    width: 130px;
+    /* height: 130px; */
+    min-width: 130px;
+    background: #fff2;
+    backdrop-filter: blur(3px);
+    padding: 16px;
+    font-size: 18px;
+}
+
+.future__weather{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.weather__after-tomorrow,
+.weather__tomorrow{
+    padding: 15px;
+    width: 45%;
+    height: 150px;
+    background: #fff2;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    font-size: 18px
+}
+.after-tomorrow__weather__info,
+.tomorrow__weather__info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+.after-tomorrow__sun,
+.tomorrow__sun{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:750px) {
+
+ .future__weather{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+ }
+ .weather__after-tomorrow,
+ .weather__tomorrow {
+    width: 80%;
+}
+
+
+}
+@media (max-width:500px) {
+    .weather__after-tomorrow,
+        .weather__tomorrow {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        
+.forecastday__item{
+    border-radius: 10px;
+    width: 130px;
+    /* height: 130px; */
+    min-width: 100px;
+    background: #fff2;
+    backdrop-filter: blur(3px);
+    padding: 16px;
+    font-size: 14px;
+}
+}
